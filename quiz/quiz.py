@@ -5,7 +5,23 @@ def show_menu():
     
     option = input("Enter option: ")
     return option
-  
+
+def ask_questions():
+    questions = []
+    answers = []
+    
+    with open("questions.txt", "r") as file:   # a with block is a good method for opening files.it handles a lot of stuff for us. For instance, we don't need to worry about closing the file because at the end of the width block it will be closed.
+     lines = file.read().splitlines()  #in the variable lines: read our file in and split the lines.
+     
+     for i, text in enumerate(lines):   #The enumerate function is going to turn each of these lists into a tuple with a line number stored in 'i' and
+         if i%2 == 0:                   #the text in 'text'. So, if 'i' is even - if the line number is even -then we say that that's a question. 
+           questions.append(text)       #If it's odd, then that's going to be an answer.
+         else:
+           answers.append(text)
+           
+     for question, answer in zip(questions, answers):
+         guess = input(question + "> ")
+         
 def add_question():
     print("")
     question = input("Enter a question\n> ")  #We'll put a new line here, and then a greater-than sign as a prompt, and a space just to make it look nice.
