@@ -1,5 +1,12 @@
-[
-   ("What is the capital of France?", "Paris"),
-   ("What is the capital of Ireland?", "Dublin")
-]
-
+What are the capital of Ireland?
+Dublin
+What are the capital of France?
+Paris
+What are the capital of Ireland?
+Dublin
+What are the capital of France?
+Paris
+What are the capital of France?
+Paris
+What are the capital of Ireland?
+Dublin
