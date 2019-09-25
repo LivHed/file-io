@@ -17,7 +17,7 @@ def ask_questions():
      
     for i, text in enumerate(lines):   #The enumerate function is going to turn each of these lists into a tuple with a line number stored in 'i' and
          if i%2 == 0:                   #the text in 'text'. So, if 'i' is even - if the line number is even -then we say that that's a question. 
-           questions.append(text)       #If it's odd, then that's going to be an answer.
+            questions.append(text)       #If it's odd, then that's going to be an answer.
          else:
            answers.append(text)
            
@@ -61,13 +61,13 @@ def game_loop():
     while True:   #loop until there is a break
        option = show_menu() 
        if option == "1":  #if our option is equal to 1, print the string.
-         ask_questions()
+           ask_questions()
        elif option == "2": 
            add_question()  #if the user selects option 2 then the add_question() function will be called and we'll be prompted for a question and an answer.
        elif option == "3":
            break     #if choosing option 3, quit the game
        else:       #In case somebody puts anything other than 1, 2 or 3  we'll print 'Invalid option'. 
            print("Invalid option")
-           print("")   #print a blank line after all this, to make it look nicer
+       print("")   #print a blank line after all this, to make it look nicer
            
 game_loop()   #call the game loop
